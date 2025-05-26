@@ -1,0 +1,1 @@
+# nprestech-guia-assinaturas
