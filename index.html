@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Nova Prestech — Guia de Atualização de Assinaturas de E-mail</title>
+    <title>Nova Prestech — Guia de Assinaturas de e-mail</title>
     <link rel="icon" href="https://prestech.com.br/site/wp-content/uploads/2024/10/Favicon-Prestech-Fundo-Branco.svg" sizes="32x32">
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -12,16 +12,17 @@
       crossorigin="anonymous"
     />
     <style>
-			* {
-				max-width: 100vw !important;
-			}
       body {
+	padding: 1rem;
         font-family: "Open Sans", sans-serif;
         background-color: #f5f5f5;
         color: #333;
         padding-top: 2rem;
         padding-bottom: 2rem;
       }
+	    figure {
+		  overflow: auto !important;  
+	    }
       header {
         background-color: #fff;
         border-bottom: 1px solid #e2e2e2;
@@ -86,13 +87,13 @@
   <body>
     <div class="container">
       <header role="banner">
-        <h1>Guia de Atualização de Assinaturas de E-mail</h1>
+        <h1>Nova Prestech — Guia de Assinaturas de e-mail</h1>
         <p>
           <div>Bem-vindo(a)!</div>
           <br style="height: 3rem" />
           <span>
             Este <b>guia</b> foi criado para ajudar
-            <mark>todos os membros da equipe da Nova Prestech</mark> a atualizarem suas assinaturas no
+            <b>todos os membros da equipe da Nova Prestech</b> a atualizarem suas <mark>assinaturas</mark> no
             <b title="Caixa de Email da Google">Gmail</b> e no
             <b title="Caixa de Email da Microsoft">Outlook</b>.</span
           >
@@ -115,48 +116,57 @@
           </li>
         </ol>
       </section>
-      <details id="secao-gmail-detail" aria-labelledby="secao-gmail-summary">
-        <summary
-          id="secao-gmail-summary"
-          aria-controls="secao-gmail-content"
-          aria-expanded="false"
-        >
-          <h3>Gmail</h3>
-        </summary>
-        <div id="secao-gmail-content" role="region">
-          <p>
-            Para atualizar sua assinatura no
-            <abbr title="Google Mail">Gmail</abbr>:
-          </p>
-          <ol>
-            <li>
-              Clique na engrenagem no canto superior e selecione
-              <strong>"Ver todas as configurações"</strong>.
-            </li>
-            <li>
-              Na aba <em>Geral</em>, role até <strong>Assinatura</strong>.
-            </li>
-            <li>
-              Clique em <strong>"Criar nova"</strong>, dê um nome e cole sua
-              assinatura.
-            </li>
-            <li>
-              Role até o fim e clique em <strong>"Salvar alterações"</strong>.
-            </li>
-          </ol>
-          <figure>
-            <div class="step-image" aria-hidden="true">
-							<iframe src="https://www.loom.com/embed/c396c705894548628b2a64fb91011803" 
-							frameborder="0" 
-							webkitallowfullscreen 
-							mozallowfullscreen 
-							allowfullscreen 
-							style="width: 100%; height: 300px;">
-							</iframe>
-						</div>
-            <figcaption><small><em>Exemplo de campo de assinatura no Gmail.</em></small></figcaption>
-          </figure>
-        </div>
+      <details
+      id="secao-zimbra-detail"
+      aria-labelledby="secao-zimbra-summary"
+    >
+          <summary
+            id="secao-zimbra-summary"
+            aria-controls="secao-zimbra-content"
+            aria-expanded="false"
+          >
+            <h3>Zimbra</h3>
+          </summary>
+          <div id="secao-zimbra-content" role="region">
+            <p>
+              Para atualizar sua assinatura no <b>Zimbra Web Client</b>:
+            </p>
+            <ol>
+              <li>
+                Faça login na sua conta Zimbra Webmail
+              </li>
+              <li>
+                Na <em>Barra superior de menus</em>, clique em <strong>"Preferências"</strong>
+              </li>
+              <li>
+                Clique no ícone de <strong>Assinaturas (📝)</strong> na <em>Barra lateral esquerda</em>
+              </li>
+              <li>
+                Na seção principal de <em>Assinaturas</em>, Escreva um <strong>Nome</strong> para a sua <em>nova assinatura</em>, no campo correspondente, localizado no início do formulário aberto
+              </li>
+              <li>
+                Após definir o nome, clique no <em>Seletor de Formatação</em> e escolha <strong>Formatar como HTML</strong>
+              </li>
+              <li>
+                Cole o conteúdo na área de texto maior (use <kbd>Ctrl</kbd> + <kbd>V</kbd> ou o <em>Botão direito do Mouse > Colar</em>)
+              </li>
+              <li>
+                Na seção de <em>Uso de assinaturas</em>, clique no <em>Campo de Seletor</em> com rótulo de <em>Novas mensagens</em> e escolha o nome da nova assinatura
+              </li>
+              <li>
+                Clique no <em>Campo de Seletor</em> com rótulo de <em>Respostas e encaminhamentos</em> e escolha o nome da nova assinatura
+              </li>
+              <li>
+                Na <em>Barra lateral esquerda</em>, clique em <strong>"Salvar"</strong>, no canto superior esquerdo
+              </li>
+            </ol>
+            <figure>
+              <img aria-hidden="true" alt="Imagem Zimbra 2024+" loading="lazy" height="400px" src="zimbra_guide_screenshot.webp"/>
+              <figcaption>
+                <small><em>Exemplo da seção de assinaturas no Zimbra.</em></small>
+              </figcaption>
+            </figure>
+          </div>
       </details>
       <details
         id="secao-outlook-web-detail"
@@ -190,7 +200,7 @@
 						<li>Após salvar, lembre de atualizar os campos de <b>Seleção</b> <small>(<span style="color: grey; opacity: 0.8;">Para novas mensagens</span>) e (<span style="color: grey; opacity: 0.8;">Para respostas/encaminhamentos</span>)</small>, logo abaixo de onde incluiu a assinatura, escolhendo o rótulo do nome </li>
           </ol>
           <figure>
-            <img width="600px" aria-hidden="true" alt="Imagem Outlook 2024+" src="/new-outlook.webp">
+            <img width="600px" aria-hidden="true" alt="Imagem Outlook 2024+" src="new-outlook.webp">
             <figcaption>
               <small><em>Tela de edição de assinatura no Outlook Web.</em></small>
             </figcaption>
@@ -258,13 +268,56 @@
                 </li>
               </ol>
               <figure>
-                <img aria-hidden="true" alt="Imagem Outlook 2024+" loading="lazy" height="400px" src="/old-outlook.webp"/>
+                <img aria-hidden="true" alt="Imagem Outlook 2024+" loading="lazy" height="400px" src="old-outlook.webp"/>
                 <figcaption>
-                  <small><em>Nova interface de assinaturas na versão 2024+.</em></small>
+                  <small><em>Janela do formulário do Outlook Clássico para Assinaturas.</em></small>
                 </figcaption>
               </figure>
             </div>
           </details>
+        </div>
+      </details>
+      <details id="secao-gmail-detail" aria-labelledby="secao-gmail-summary">
+        <summary
+          id="secao-gmail-summary"
+          aria-controls="secao-gmail-content"
+          aria-expanded="false"
+        >
+          <h3>Gmail</h3>
+        </summary>
+        <div id="secao-gmail-content" role="region">
+          <p>
+            Para atualizar sua assinatura no
+            <abbr title="Google Mail">Gmail</abbr>:
+          </p>
+          <ol>
+            <li>
+              Clique na engrenagem no canto superior e selecione
+              <strong>"Ver todas as configurações"</strong>.
+            </li>
+            <li>
+              Na aba <em>Geral</em>, role até <strong>Assinatura</strong>.
+            </li>
+            <li>
+              Clique em <strong>"Criar nova"</strong>, dê um nome e cole sua
+              assinatura.
+            </li>
+            <li>
+              Role até o fim e clique em <strong>"Salvar alterações"</strong>.
+            </li>
+          </ol>
+          <figure>
+            <div class="step-image" aria-hidden="true">
+							<iframe src="https://www.loom.com/embed/c396c705894548628b2a64fb91011803" 
+							frameborder="0" 
+							webkitallowfullscreen 
+							mozallowfullscreen 
+							allowfullscreen 
+							style="width: 100%; height: 300px;">
+							</iframe>
+						</div>
+            <figcaption><small><em>Exemplo de campo de assinatura no Gmail.</em></small></figcaption>
+          </figure>
         </div>
       </details>
     </div>
