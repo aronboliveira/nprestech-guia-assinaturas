@@ -71,6 +71,11 @@
 				margin-block: 1rem;
 				line-height: 1.6rem;
 			}
+      ul li {
+        margin-block: 1rem;
+        margin-left: 1rem;
+        line-height: 1.6rem;
+      }
       .step-image {
         width: 100%;
         max-height: 300px;
@@ -81,6 +86,16 @@
         color: #888;
         margin-bottom: 1rem;
         border: 1px dashed #ccc;
+      }
+      .compound-li {
+        padding-top: 0.25rem;
+        padding-bottom: 0.5rem;
+      }
+      .compound-li::marker {
+        content: "";
+      }
+      .compound-li ul {
+        padding: 0;
       }
     </style>
   </head>
@@ -128,10 +143,10 @@
             <h3>Zimbra</h3>
           </summary>
           <div id="secao-zimbra-content" role="region">
-            <p>
+            <p style="padding-left: 1rem;">
               Para atualizar sua assinatura no <b>Zimbra Web Client</b>:
             </p>
-            <ol>
+            <ul>
               <li>
                 Faça login na sua conta Zimbra Webmail
               </li>
@@ -147,8 +162,23 @@
               <li>
                 Após definir o nome, clique no <em>Seletor de Formatação</em> e escolha <strong>Formatar como HTML</strong>
               </li>
-              <li>
-                Cole o conteúdo na área de texto maior (use <kbd>Ctrl</kbd> + <kbd>V</kbd> ou o <em>Botão direito do Mouse > Colar</em>)
+              <li class="compound-li">
+                <ul style="list-style: none;">
+                  <li>
+                    <b>a. Para Imagens: </b>
+                    <ol>
+                      <li>Clique no ícone de <em>Inserir Imagens</em><img width="16px" height="16px" style="display: inline; transform: translateY(3px); margin-left: 0.5rem;" loading="lazy" src="image-psvg.png"/>;</li>
+                      <li>Clique no botão "Escolher arquivo" para ativar o seu <em>Gerenciador de arquivos</em>;</li>
+                      <li>Navegue até o local onde a imagem está armazenada e selecione-a, clicando duas vezes na mesma ou apertando <kbd>Enter</kbd> após um clique;</li>
+                      <li>Após isso, aperte no botão de <kbd>Ok</kbd>, na parte inferior direita da janela modal aberta pelo Zimbra;</li>
+                      <li>Caso seja questionado sobre <em>A existência do arquivo no servidor</em>, clique no check circular para <strong style="color:#479EF5">Novo</strong> e prossiga com <kbd>Ok</kbd> novamente;</li>
+                      <li>Você pode <strong>Redimensionar a imagem</strong> clicando na mesma e depois arrastando o mouse (com o botão esquerdo pressionado) ao clicar em um dos <em>pequenos quadrados</em> que aparecerão nas <em>arestas</em> do retângulo da imagem;</li>
+                    </ol>
+                  </li>
+                  <li>
+                    <b>b. Para HTML puro: </b><mark>(Não recomendado mais!!)</mark> Cole o conteúdo na área de texto maior (use <kbd>Ctrl</kbd> + <kbd>V</kbd> ou o <em>Botão direito do Mouse > Colar</em>)
+                  </li>
+                </ul>
               </li>
               <li>
                 Na seção de <em>Uso de assinaturas</em>, clique no <em>Campo de Seletor</em> com rótulo de <em>Novas mensagens</em> e escolha o nome da nova assinatura
@@ -192,10 +222,37 @@
             </li>
             <li><small>Caso tenha outras assinaturas, clique em <em style="color: #479EF5; font-weight: 500;"><span style="font-weight: 600;">+</span> Nova assinatura</em>.</small></li>
 						<li>Dê um nome-rótulo para sua assinatura, escrevendo no campo inicialmente com <small style="color: grey; opacity: 0.8;">Editar Nome da Assinatura</small></li>
-            <li>
-              No <b>caixa de texto maior</b> (com botões de edição abaixo), <b>cole</b> seu conteúdo (Botão direito do Mouse > Colar ou <kbd>Ctrl</kbd> +
-							<kbd>V</kbd>) e clique em
-              <strong>"Salvar"</strong>.
+            <li class="compound-li" style="padding-top:0;">
+              <ul style="list-style:none; margin:0; padding-left:0;">
+                <li>
+                  <b>a. Para Imagens (Outlook moderno): </b>
+                  <ol>
+                    <li>Abra <strong>Configurações</strong> (ícone de engrenagem) &rarr; <strong>Email</strong> &rarr; <strong>Redigir e responder</strong> (<em>Compose and reply</em>);</li>
+                    <li>Crie ou selecione a assinatura e posicione o cursor no editor;</li>
+                    <li>Clique no ícone de <em>Imagem</em> (<em>Insert image</em>) <em>ou</em> arraste e solte a imagem no editor;</li>
+                    <li>No seletor de arquivos, escolha a imagem e clique em <strong>Abrir</strong> (ela será inserida inline);</li>
+                    <li>Para <strong>redimensionar</strong>, clique na imagem e arraste as alças dos cantos;</li>
+                    <li>Clique em <strong>Salvar</strong> na seção de assinaturas para aplicar as alterações.</li>
+                  </ol>
+                </li>
+
+                <li>
+                  <b>b. Para HTML puro: </b>
+                  <mark style="background-color:#FFF3CD; padding:2px 5px; border-radius:3px;">(Não recomendado!)</mark>
+                  Cole o HTML diretamente no editor de assinaturas
+                  (use
+                  <kbd style="background:#333; color:#fff; padding:2px 6px; border-radius:4px; font-family:monospace;">Ctrl</kbd> +
+                  <kbd style="background:#333; color:#fff; padding:2px 6px; border-radius:4px; font-family:monospace;">V</kbd>).
+                  <div style="margin-top:6px; font-size:0.95em;">
+                    <em>Dicas:</em>
+                    <ul style="margin:6px 0 0 18px;">
+                      <li>Prefira <strong>CSS inline</strong>; o Outlook moderno pode descartar &lt;style&gt; e scripts;</li>
+                      <li>Imagens remotas devem usar <strong>URL HTTPS pública</strong> ou ser inseridas via upload;</li>
+                      <li>Evite fontes web externas; use fontes seguras do sistema.</li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
             </li>
 						<li>Após salvar, lembre de atualizar os campos de <b>Seleção</b> <small>(<span style="color: grey; opacity: 0.8;">Para novas mensagens</span>) e (<span style="color: grey; opacity: 0.8;">Para respostas/encaminhamentos</span>)</small>, logo abaixo de onde incluiu a assinatura, escolhendo o rótulo do nome </li>
           </ol>
@@ -262,9 +319,23 @@
 								<li>
 									Na divisória principal carregada, agora procure pelo botão de <strong>"Assinaturas..."</strong>
 								</li>
-                <li>
-                  Crie ou selecione uma assinatura, cole o conteúdo e clique em
-                  <strong>"Salvar"</strong>.
+                <li class="compound-li" style="padding-top: none;">
+                  <ul style="list-style: none;">
+                    <li>
+                      <b>a. Para Imagens: </b>
+                      <ol>
+                        <li>No editor de assinaturas, posicione o cursor onde deseja inserir a imagem;</li>
+                        <li>Clique no ícone de <em>Inserir Imagem</em>, na barra de ferramentas;</li>
+                        <li>No diálogo que aparecer, navegue até a imagem desejada e selecione-a;</li>
+                        <li>Clique em <strong>Inserir</strong> para adicionar a imagem à assinatura;</li>
+                        <li>Você pode <strong>Redimensionar a imagem</strong> clicando nela e arrastando os cantos com o mouse;</li>
+                        <li>Clique em <strong>OK</strong> para salvar as alterações na assinatura.</li>
+                      </ol>
+                    </li>
+                    <li>
+                      <b>b. Para HTML puro: </b><mark style="background-color: #FFF3CD; padding: 2px 5px; border-radius: 3px;">(Não recomendado!)</mark> Cole o conteúdo HTML diretamente no editor de assinaturas (use <kbd style="background: #333; color: white; padding: 2px 6px; border-radius: 4px; font-family: monospace;">Ctrl</kbd> + <kbd style="background: #333; color: white; padding: 2px 6px; border-radius: 4px; font-family: monospace;">V</kbd>)
+                    </li>
+                  </ul>
                 </li>
               </ol>
               <figure>
